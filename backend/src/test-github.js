@@ -1,4 +1,4 @@
-const { GitHubAnalyzer } = require('./services/githubApi');
+const { GitHubAnalyzer } = require('../services/githubApi');
 
 async function testGitHub() {
   const analyzer = new GitHubAnalyzer();

@@ -139,6 +139,114 @@ To run both frontend and backend simultaneously:
 
 The frontend will be available at `http://localhost:5173` and will proxy API requests to the backend at `http://localhost:3001`.
 
+## Deployment
+
+### Frontend Deployment (Netlify)
+
+The frontend is configured for deployment on Netlify with the included `netlify.toml` configuration:
+
+1. **Connect Repository to Netlify**
+   - Sign up/login to [Netlify](https://netlify.com)
+   - Connect your GitHub repository
+   - Netlify will automatically detect the build settings from `netlify.toml`
+
+2. **Environment Variables**
+   Set the following environment variables in your Netlify dashboard:
+   ```
+   VITE_GITHUB_TOKEN=your_github_personal_access_token
+   VITE_API_URL=your_backend_api_url
+   ```
+
+3. **Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `frontend/dist`
+   - Node.js version: 18+
+
+4. **Domain Configuration**
+   - Netlify provides a default domain (e.g., `codecompass-abc123.netlify.app`)
+   - Configure custom domain in Netlify settings if desired
+
+### Backend Deployment
+
+For backend deployment, consider these options:
+
+1. **Railway** (Recommended)
+   ```bash
+   npm install -g @railway/cli
+   railway login
+   railway init
+   railway up
+   ```
+
+2. **Render**
+   - Connect GitHub repository
+   - Set build command: `npm install`
+   - Set start command: `node src/server.js`
+   - Add environment variables
+
+3. **Heroku**
+   ```bash
+   heroku create codecompass-api
+   git subtree push --prefix backend heroku main
+   ```
+
+### Environment Variables for Production
+
+**Frontend (.env.production)**
+```env
+VITE_API_URL=https://your-backend-domain.com
+VITE_GITHUB_TOKEN=your_github_token
+```
+
+**Backend (.env)**
+```env
+PORT=3001
+GITHUB_TOKEN=your_github_personal_access_token
+NODE_ENV=production
+CORS_ORIGIN=https://your-frontend-domain.netlify.app
+```
+
+### GitHub Repository Setup
+
+To create and push to a GitHub repository:
+
+1. **Create Repository on GitHub**
+   - Go to GitHub and create a new repository named "CodeCompass"
+   - Don't initialize with README (since you already have one)
+
+2. **Initialize and Push**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: CodeCompass full-stack application"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/CodeCompass.git
+   git push -u origin main --tags
+   ```
+
+3. **Set Up Branch Protection**
+   - Enable branch protection for `main`
+   - Require pull request reviews
+   - Enable status checks
+
+### Continuous Deployment
+
+Once connected to GitHub:
+- **Netlify**: Automatically deploys on push to main branch
+- **Backend**: Set up automatic deployments with your chosen platform
+- **Feature Branches**: Consider deploy previews for testing
+
+### Production Checklist
+
+- [ ] Frontend deployed and accessible
+- [ ] Backend API deployed and accessible
+- [ ] CORS properly configured
+- [ ] Environment variables set correctly
+- [ ] GitHub repository created and synced
+- [ ] Custom domains configured (if applicable)
+- [ ] SSL certificates enabled
+- [ ] Performance monitoring set up
+
 ## Planned Roadmap
 
 ### Phase 1: Core Foundation ✅
