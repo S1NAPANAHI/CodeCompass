@@ -325,17 +325,6 @@ If you find a bug or have a feature request:
 - Focus on constructive feedback
 - Celebrate diverse perspectives and contributions
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-- 📧 **Email**: support@codecompass.dev
-- 💬 **Discord**: Join our community server
-- 🐛 **Issues**: Create an issue on GitHub
-- 📖 **Docs**: Check our documentation site
-
 ---
 
 **Happy coding and reverse engineering! 🚀**
