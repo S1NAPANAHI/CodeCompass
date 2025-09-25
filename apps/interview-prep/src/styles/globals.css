@@ -1,0 +1,388 @@
+/* Interview Prep App Global Styles */
+
+/* Base styles */
+.interview-prep-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Question Card Styles */
+.question-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 mb-4 overflow-hidden transition-all duration-200 hover:shadow-md;
+}
+
+.question-header {
+  @apply p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors;
+}
+
+.question-title {
+  @apply flex items-start space-x-3;
+}
+
+.question-number {
+  @apply flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full flex items-center justify-center text-sm font-semibold;
+}
+
+.question-text {
+  @apply flex-1 text-gray-900 dark:text-white font-medium leading-relaxed;
+}
+
+.question-meta {
+  @apply flex items-center justify-between mt-3;
+}
+
+.difficulty-badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.difficulty-badge.beginner {
+  @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+}
+
+.difficulty-badge.intermediate {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200;
+}
+
+.difficulty-badge.advanced {
+  @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+}
+
+.question-actions {
+  @apply flex items-center space-x-2;
+}
+
+.action-btn {
+  @apply p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200;
+}
+
+.action-btn.bookmarked {
+  @apply text-yellow-500 hover:text-yellow-600;
+}
+
+/* Question Content */
+.question-content {
+  @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.question-content.expanded {
+  @apply max-h-none;
+}
+
+.question-answer {
+  @apply p-4 pt-0 text-gray-700 dark:text-gray-300 leading-relaxed;
+}
+
+.key-points {
+  @apply px-4 pb-4;
+}
+
+.key-points h4 {
+  @apply text-sm font-semibold text-gray-900 dark:text-white mb-2;
+}
+
+.key-points ul {
+  @apply space-y-1;
+}
+
+.key-points li {
+  @apply text-sm text-gray-600 dark:text-gray-400 flex items-start;
+}
+
+.key-points li:before {
+  content: '•';
+  @apply text-blue-500 mr-2 font-bold;
+}
+
+/* Code Examples */
+.code-example {
+  @apply px-4 pb-4;
+}
+
+.code-header {
+  @apply flex items-center justify-between bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-t-md;
+}
+
+.code-title {
+  @apply text-sm font-medium text-gray-700 dark:text-gray-300;
+}
+
+.copy-btn {
+  @apply text-xs bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded transition-colors;
+}
+
+.code-block {
+  @apply bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-b-md p-4 overflow-x-auto;
+}
+
+.code-block code {
+  @apply text-sm font-mono text-gray-800 dark:text-gray-200;
+}
+
+/* Flashcard Styles */
+.flashcard {
+  @apply relative w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300;
+  min-height: 300px;
+  perspective: 1000px;
+}
+
+.flashcard-inner {
+  @apply relative w-full h-full transition-transform duration-500;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  @apply absolute inset-0 p-6 flex flex-col justify-center;
+  backface-visibility: hidden;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-question {
+  @apply text-lg font-medium text-gray-900 dark:text-white text-center leading-relaxed;
+}
+
+.flashcard-answer {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+}
+
+.flashcard-controls {
+  @apply flex justify-center space-x-4 mt-6;
+}
+
+.flashcard-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.flashcard-btn.flip {
+  @apply bg-blue-500 hover:bg-blue-600 text-white;
+}
+
+.flashcard-btn.confidence {
+  @apply bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300;
+}
+
+/* Progress Bars */
+.progress-bar {
+  @apply w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full transition-all duration-300 ease-out;
+}
+
+.progress-fill.success {
+  @apply bg-gradient-to-r from-green-500 to-green-600;
+}
+
+.progress-fill.warning {
+  @apply bg-gradient-to-r from-yellow-500 to-yellow-600;
+}
+
+.progress-fill.info {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.modal-content {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700;
+}
+
+.modal-title {
+  @apply text-xl font-semibold text-gray-900 dark:text-white;
+}
+
+.modal-close {
+  @apply text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors;
+}
+
+.modal-body {
+  @apply p-6;
+}
+
+/* Practice Mode */
+.practice-timer {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg font-mono text-lg;
+}
+
+.practice-stats {
+  @apply grid grid-cols-3 gap-4 mb-6;
+}
+
+.practice-stat {
+  @apply text-center;
+}
+
+.practice-stat-value {
+  @apply text-2xl font-bold text-gray-900 dark:text-white;
+}
+
+.practice-stat-label {
+  @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-header {
+    @apply p-3;
+  }
+  
+  .question-title {
+    @apply flex-col space-x-0 space-y-2;
+  }
+  
+  .question-number {
+    @apply self-start;
+  }
+  
+  .question-meta {
+    @apply flex-col space-y-2 items-start;
+  }
+  
+  .question-actions {
+    @apply self-end;
+  }
+  
+  .flashcard {
+    min-height: 250px;
+  }
+  
+  .flashcard-front,
+  .flashcard-back {
+    @apply p-4;
+  }
+  
+  .practice-stats {
+    @apply grid-cols-1 gap-2;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .action-btn,
+  .flashcard-controls,
+  .modal-overlay {
+    display: none !important;
+  }
+  
+  .question-content {
+    max-height: none !important;
+  }
+  
+  .question-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .question-card {
+    @apply border-2 border-gray-900 dark:border-white;
+  }
+  
+  .difficulty-badge {
+    @apply font-bold;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .question-content,
+  .flashcard-inner,
+  .progress-fill {
+    transition: none !important;
+  }
+  
+  .animate-slide-in,
+  .animate-fade-in,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.action-btn:focus,
+.copy-btn:focus,
+.flashcard-btn:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800;
+}
+
+/* Loading States */
+.loading {
+  @apply animate-pulse;
+}
+
+.loading-skeleton {
+  @apply bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+/* Error States */
+.error-message {
+  @apply bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg;
+}
+
+/* Success States */
+.success-message {
+  @apply bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 px-4 py-3 rounded-lg;
+}
