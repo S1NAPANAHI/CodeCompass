@@ -1,0 +1,79 @@
+{
+  "name": "codecompass-platform",
+  "version": "2.0.0",
+  "description": "🧭 Unified development platform: Site analysis, interview prep, and portfolio showcase",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:codecompass": "cd apps/codecompass && npm run dev",
+    "dev:portfolio": "cd apps/portfolio && npm run dev",
+    "dev:interview-prep": "cd apps/interview-prep && npm run dev",
+    "build": "npm run build:packages && npm run build:apps",
+    "build:packages": "npm run build:ui && npm run build:utils && npm run build:database",
+    "build:ui": "cd packages/ui && npm run build",
+    "build:utils": "cd packages/utils && npm run build",
+    "build:database": "cd packages/database && npm run build",
+    "build:apps": "npm run build:codecompass && npm run build:portfolio && npm run build:interview-prep",
+    "build:codecompass": "cd apps/codecompass && npm run build",
+    "build:portfolio": "cd apps/portfolio && npm run build",
+    "build:interview-prep": "cd apps/interview-prep && npm run build",
+    "test": "npm run test:packages && npm run test:apps",
+    "test:packages": "cd packages/ui && npm test && cd ../utils && npm test",
+    "test:apps": "cd apps/codecompass && npm test && cd ../portfolio && npm test && cd ../interview-prep && npm test",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "setup:dev": "npm install && npm run setup:packages && npm run setup:apps",
+    "setup:packages": "cd packages/ui && npm install && cd ../utils && npm install && cd ../database && npm install",
+    "setup:apps": "cd apps/codecompass && npm install && cd ../portfolio && npm install && cd ../interview-prep && npm install",
+    "migrate:db": "cd packages/database && npm run migrate",
+    "seed:db": "cd packages/database && npm run seed",
+    "deploy:frontend": "vercel --prod",
+    "deploy:backend": "cd backend && npm run deploy"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "frontend",
+    "backend"
+  ],
+  "keywords": [
+    "react",
+    "nextjs",
+    "typescript",
+    "interview-prep",
+    "portfolio",
+    "site-analysis",
+    "web-development",
+    "full-stack",
+    "supabase",
+    "monorepo"
+  ],
+  "author": "Sina Panahi <sina@sinapanahi.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/S1NAPANAHI/CodeCompass.git"
+  },
+  "homepage": "https://codecompass.dev",
+  "bugs": {
+    "url": "https://github.com/S1NAPANAHI/CodeCompass/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
