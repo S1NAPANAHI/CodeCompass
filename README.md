@@ -1,332 +1,299 @@
-# CodeCompass 🧭
+# CodeCompass Platform 🧭
 
-## Vision
+**Navigate your way to full-stack mastery through an integrated development platform**
 
-CodeCompass helps beginners learn full-stack development by reverse-engineering sites they admire.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-👉%20Try%20Now-blue?style=for-the-badge)](https://codecompass.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/S1NAPANAHI/CodeCompass?style=flat-square)](https://github.com/S1NAPANAHI/CodeCompass/stargazers)
 
-Our mission is to bridge the gap between inspiration and implementation, empowering aspiring developers to understand how their favorite websites work by providing tools to analyze, break down, and learn from real-world web applications.
+## 🌟 What is CodeCompass?
 
-## Core Features
+CodeCompass is a **unified development platform** that combines three powerful tools to accelerate your journey as a full-stack developer:
 
-### 🔍 **Site Analysis**
-- Extract and analyze the structure of any website
-- Identify key components, layouts, and design patterns
-- Generate interactive breakdowns of HTML structure and CSS styles
+### 🔍 **CodeCompass** - Site Analysis Tool
+Reverse-engineer websites and extract design patterns, components, and code structure.
+- Extract and analyze website structure
+- Identify key components and design patterns  
+- Generate React components from designs
+- Interactive tutorials and learning modules
+- GitHub integration for project management
 
-### 🎨 **Design Deconstruction**
-- Visual component identification and isolation
-- Color palette extraction and analysis
-- Typography and spacing analysis
-- Responsive design pattern recognition
+### 📚 **Interview Prep** - React & Next.js Preparation Hub
+Master technical interviews with comprehensive preparation tools.
+- **150+ Interview Questions** with spaced repetition
+- **Top 20 Most Common Questions** with detailed explanations
+- **Coding Challenges** with progressive difficulty
+- **4-Week Study Roadmap** with structured learning
+- **Analytics Dashboard** for progress tracking
+- **Smart Flashcard System** with AI-powered review scheduling
 
-### 🛠️ **Code Generation**
-- Generate React components based on analyzed designs
-- Create TypeScript interfaces for data structures
-- Provide Tailwind CSS classes for styling recreation
-- Export clean, production-ready code snippets
+### 💼 **Portfolio** - Professional Showcase
+Dynamic portfolio showcasing your projects and skills.
+- **Project Showcase** with live demos and GitHub integration
+- **Interactive Skills Matrix** with proficiency levels
+- **Professional Timeline** of your development journey
+- **Contact Integration** with form and social links
+- **Achievement Gallery** for certifications and awards
 
-### 📚 **Learning Modules**
-- Step-by-step tutorials for recreating analyzed components
-- Interactive coding challenges based on real websites
-- Best practices and modern development patterns
-- Progress tracking and skill assessment
+## ✨ Key Features
 
-### 🔗 **GitHub Integration**
-- Save analyzed sites to your GitHub repositories
-- Version control for your learning projects
-- Share discoveries with the community
-- Collaborate on reverse-engineering projects
+### 🚀 **Unified Experience**
+- **Single Sign-On**: One account across all tools
+- **Shared Progress**: Cross-platform learning analytics
+- **Consistent Design**: Unified dark/light theme system
+- **Real-time Sync**: Progress syncs across devices
 
-## Tech Stack Overview
+### 🎯 **Learning Pathways**
+1. **Analyze** websites with CodeCompass to understand patterns
+2. **Prepare** for interviews with comprehensive practice
+3. **Showcase** your skills through your professional portfolio
+4. **Track** progress across all learning activities
 
-### Frontend
-- **React 19** - Modern UI library with latest features
-- **TypeScript** - Type-safe JavaScript for better development experience
-- **Tailwind CSS 4** - Utility-first CSS framework for rapid styling
-- **Vite** - Fast build tool and development server
-- **Octokit** - GitHub API integration
+### 🛠️ **Modern Tech Stack**
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: Node.js + Express
+- **Database**: Supabase (PostgreSQL)
+- **Deployment**: Vercel (Frontend) + Railway (Backend)
+- **Architecture**: Monorepo with shared packages
 
-### Backend
-- **Node.js** - JavaScript runtime environment
-- **Express 5** - Web application framework
-- **TypeScript** - Type-safe server-side development
-- **CORS** - Cross-origin resource sharing middleware
-- **dotenv** - Environment variable management
+## 🚀 Quick Start
 
-### Development Tools
-- **ESLint** - Code linting and formatting
-- **PostCSS** - CSS processing and optimization
-- **Nodemon** - Development server auto-restart
+### 🌐 **Try Online** (Recommended)
+**[👉 Launch CodeCompass Platform](https://codecompass.dev)**
 
-## Local Setup Instructions
+No setup required! Create an account to unlock all features.
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn package manager
-- Git for version control
+### 💻 **Local Development**
 
-### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/S1NAPANAHI/CodeCompass.git
+cd CodeCompass
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/codecompass.git
-   cd codecompass
-   ```
+# Install dependencies for all packages
+npm run setup:dev
 
-2. **Navigate to frontend directory**
-   ```bash
-   cd frontend
-   ```
+# Start the development servers
+npm run dev
 
-3. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Visit `http://localhost:5173` to see the application
-
-### Backend Setup
-
-1. **Navigate to backend directory**
-   ```bash
-   cd backend
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   Create a `.env` file in the backend directory:
-   ```env
-   PORT=3001
-   GITHUB_TOKEN=your_github_personal_access_token
-   NODE_ENV=development
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   node index.js
-   ```
-
-5. **Verify the server**
-   Visit `http://localhost:3001` to confirm the server is running
-
-### Full Stack Development
-
-To run both frontend and backend simultaneously:
-
-1. **Terminal 1 - Backend**
-   ```bash
-   cd backend
-   npm run dev
-   ```
-
-2. **Terminal 2 - Frontend**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-The frontend will be available at `http://localhost:5173` and will proxy API requests to the backend at `http://localhost:3001`.
-
-## Deployment
-
-### Frontend Deployment (Netlify)
-
-The frontend is configured for deployment on Netlify with the included `netlify.toml` configuration:
-
-1. **Connect Repository to Netlify**
-   - Sign up/login to [Netlify](https://netlify.com)
-   - Connect your GitHub repository
-   - Netlify will automatically detect the build settings from `netlify.toml`
-
-2. **Environment Variables**
-   Set the following environment variables in your Netlify dashboard:
-   ```
-   VITE_GITHUB_TOKEN=your_github_personal_access_token
-   VITE_API_URL=your_backend_api_url
-   ```
-
-3. **Build Settings**
-   - Build command: `npm run build`
-   - Publish directory: `frontend/dist`
-   - Node.js version: 18+
-
-4. **Domain Configuration**
-   - Netlify provides a default domain (e.g., `codecompass-abc123.netlify.app`)
-   - Configure custom domain in Netlify settings if desired
-
-### Backend Deployment
-
-For backend deployment, consider these options:
-
-1. **Railway** (Recommended)
-   ```bash
-   npm install -g @railway/cli
-   railway login
-   railway init
-   railway up
-   ```
-
-2. **Render**
-   - Connect GitHub repository
-   - Set build command: `npm install`
-   - Set start command: `node src/server.js`
-   - Add environment variables
-
-3. **Heroku**
-   ```bash
-   heroku create codecompass-api
-   git subtree push --prefix backend heroku main
-   ```
-
-### Environment Variables for Production
-
-**Frontend (.env.production)**
-```env
-VITE_API_URL=https://your-backend-domain.com
-VITE_GITHUB_TOKEN=your_github_token
+# Or run individual apps
+npm run dev:codecompass    # Site analysis tool
+npm run dev:portfolio      # Portfolio showcase  
+npm run dev:interview-prep # Interview preparation
 ```
 
-**Backend (.env)**
-```env
+### 🗄️ **Database Setup**
+
+1. **Create Supabase Project**: [supabase.com](https://supabase.com)
+2. **Run Migrations**: Execute SQL files in `packages/database/migrations/`
+3. **Update Config**: Add your Supabase credentials to environment variables
+4. **Seed Data**: `npm run seed:db`
+
+## 📁 Project Structure
+
+```
+CodeCompass/
+├── apps/
+│   ├── codecompass/         # 🔍 Site analysis application
+│   ├── portfolio/           # 💼 Portfolio showcase
+│   └── interview-prep/      # 📚 Interview preparation platform
+├── packages/
+│   ├── ui/                  # 🎨 Shared UI components
+│   ├── utils/               # 🛠️ Shared utilities & helpers
+│   └── database/            # 🗄️ Supabase schema & migrations
+├── src/                     # 🏠 Main application shell
+│   ├── components/          # Shared layout components
+│   ├── pages/               # Main platform pages
+│   └── lib/                 # Platform configuration
+├── backend/                 # 🔙 Express API server
+└── frontend/                # ⚡ Original Vite frontend (to be migrated)
+```
+
+## 🎯 How to Use Each Tool
+
+### 🔍 **CodeCompass - Site Analysis**
+1. **Enter URL** of any website you want to analyze
+2. **Extract Components** - Get React component structure  
+3. **Analyze Design** - Color palettes, typography, layouts
+4. **Generate Code** - Export TypeScript/React components
+5. **Save Projects** - Version control with GitHub integration
+
+### 📚 **Interview Prep - Study Strategy**
+
+**🔥 24-Hour Crash Course**
+- **Phase 1 (8h)**: Top 20 Questions + React Fundamentals + Hooks
+- **Phase 2 (4h)**: Coding Challenges + Next.js Basics  
+- **Phase 3 (4h)**: Spaced Repetition Review + Mock Interviews
+
+**📅 4-Week Complete Prep**
+- **Week 1-2**: React mastery with analytics-driven focus
+- **Week 3**: Next.js and JavaScript fundamentals
+- **Week 4**: System design and comprehensive review
+
+### 💼 **Portfolio - Professional Showcase**
+1. **Project Gallery** - Showcase your best work with live demos
+2. **Skills Matrix** - Interactive visualization of your technical skills
+3. **Professional Story** - About section with your development journey
+4. **Contact Integration** - Multiple ways for employers to reach you
+5. **GitHub Integration** - Live repository stats and contributions
+
+## 🎨 Unified Design System
+
+### 🌓 **Theming**
+- **Auto-detection**: Matches system preference
+- **Manual Toggle**: Switch between light/dark modes
+- **Consistent Colors**: Shared palette across all apps
+- **Accessibility**: WCAG 2.1 AA compliant
+
+### 🎨 **Components**
+- **Design Tokens**: Consistent spacing, colors, typography
+- **Responsive Design**: Mobile-first approach
+- **Accessibility**: Screen reader and keyboard navigation support
+- **Animation**: Smooth transitions and micro-interactions
+
+## 📊 Analytics & Progress Tracking
+
+### 📈 **Cross-Platform Metrics**
+- **Learning Streaks**: Daily study activity across all tools
+- **Skill Progress**: Track improvement in different areas
+- **Time Analytics**: Understand your learning patterns
+- **Achievement System**: Unlock badges and milestones
+
+### 🎯 **Personalized Insights**
+- **Weakness Detection**: AI identifies areas needing focus
+- **Study Recommendations**: Personalized learning paths
+- **Interview Readiness**: Assessment of your preparation level
+- **Progress Reports**: Weekly/monthly learning summaries
+
+## 🚀 Deployment
+
+### 🌐 **Production Deployment**
+
+**Frontend (Vercel)**
+```bash
+# Deploy main platform
+vercel --prod
+
+# Deploy individual apps
+cd apps/codecompass && vercel --prod
+cd apps/portfolio && vercel --prod  
+cd apps/interview-prep && vercel --prod
+```
+
+**Backend (Railway)**
+```bash
+cd backend
+railway deploy
+```
+
+### 🔧 **Environment Configuration**
+
+```bash
+# Platform
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_API_URL=your_backend_url
+
+# Backend
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+GITHUB_TOKEN=your_github_token
 PORT=3001
-GITHUB_TOKEN=your_github_personal_access_token
-NODE_ENV=production
-CORS_ORIGIN=https://your-frontend-domain.netlify.app
 ```
 
-### GitHub Repository Setup
+## 🛣️ Roadmap
 
-To create and push to a GitHub repository:
+### 🔜 **Phase 1 (Q1 2025)** - Core Platform
+- [x] ✅ Unified project structure
+- [x] ✅ Shared component system  
+- [x] ✅ Cross-app navigation
+- [ ] 🚧 Interview prep React migration
+- [ ] 🚧 Portfolio dynamic content
+- [ ] 🚧 Enhanced site analysis
 
-1. **Create Repository on GitHub**
-   - Go to GitHub and create a new repository named "CodeCompass"
-   - Don't initialize with README (since you already have one)
+### 🚀 **Phase 2 (Q2 2025)** - Advanced Features  
+- [ ] 📱 Mobile applications (React Native)
+- [ ] 🤖 AI-powered code generation
+- [ ] 👥 Collaborative features
+- [ ] 🎥 Video tutorial integration
+- [ ] 📊 Advanced analytics dashboard
 
-2. **Initialize and Push**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: CodeCompass full-stack application"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/CodeCompass.git
-   git push -u origin main --tags
-   ```
+### 🌟 **Phase 3 (Q3 2025)** - Platform Expansion
+- [ ] 🏢 Company-specific interview prep
+- [ ] 🎓 Learning path certifications
+- [ ] 🌍 Multi-language support
+- [ ] 🔗 Third-party integrations
+- [ ] 📈 Marketplace for templates
 
-3. **Set Up Branch Protection**
-   - Enable branch protection for `main`
-   - Require pull request reviews
-   - Enable status checks
+## 🤝 Contributing
 
-### Continuous Deployment
+We welcome contributions! Here's how you can help:
 
-Once connected to GitHub:
-- **Netlify**: Automatically deploys on push to main branch
-- **Backend**: Set up automatic deployments with your chosen platform
-- **Feature Branches**: Consider deploy previews for testing
+### 🐛 **Ways to Contribute**
+- **Add Interview Questions** - Share questions from your experiences
+- **Improve Site Analysis** - Enhance component detection algorithms
+- **Create Portfolio Templates** - Design new portfolio layouts
+- **Fix Bugs** - Help us squash issues
+- **Write Documentation** - Improve guides and tutorials
+- **Add Features** - Implement items from our roadmap
 
-### Production Checklist
+### 🛠️ **Development Workflow**
+```bash
+# Fork and clone
+git clone https://github.com/yourusername/CodeCompass.git
 
-- [ ] Frontend deployed and accessible
-- [ ] Backend API deployed and accessible
-- [ ] CORS properly configured
-- [ ] Environment variables set correctly
-- [ ] GitHub repository created and synced
-- [ ] Custom domains configured (if applicable)
-- [ ] SSL certificates enabled
-- [ ] Performance monitoring set up
+# Create feature branch
+git checkout -b feature/your-feature-name
 
-## Planned Roadmap
+# Set up development environment
+npm run setup:dev
 
-### Phase 1: Core Foundation ✅
-- [x] Basic project structure
-- [x] React + TypeScript frontend setup
-- [x] Express backend with GitHub integration
-- [x] Initial UI components (Navbar, Hero)
+# Make changes and test
+npm run dev
+npm run test
+npm run lint
 
-### Phase 2: Analysis Engine (Q1 2025)
-- [ ] Website scraping and analysis tools
-- [ ] Component detection algorithms
-- [ ] CSS extraction and parsing
-- [ ] Basic visual breakdown features
+# Commit and push
+git add .
+git commit -m "feat: add your feature description"
+git push origin feature/your-feature-name
 
-### Phase 3: Code Generation (Q2 2025)
-- [ ] React component code generation
-- [ ] TypeScript interface generation
-- [ ] Tailwind CSS class mapping
-- [ ] Export functionality for generated code
+# Create Pull Request
+```
 
-### Phase 4: Learning Platform (Q3 2025)
-- [ ] Interactive tutorials and challenges
-- [ ] Progress tracking system
-- [ ] Community features and sharing
-- [ ] Advanced analysis tools
+## 📞 Support & Community
 
-### Phase 5: Advanced Features (Q4 2025)
-- [ ] AI-powered design suggestions
-- [ ] Advanced responsive analysis
-- [ ] Performance optimization insights
-- [ ] Browser extension for instant analysis
+### 🆘 **Get Help**
+- **🐛 Issues**: [GitHub Issues](https://github.com/S1NAPANAHI/CodeCompass/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/S1NAPANAHI/CodeCompass/discussions)  
+- **📧 Email**: [hello@codecompass.dev](mailto:hello@codecompass.dev)
+- **🐦 Twitter**: [@CodeCompassDev](https://twitter.com/CodeCompassDev)
 
-## Contributing Guidelines
+### 💝 **Support the Project**
+- ⭐ **Star this repository** if it helped you!
+- 🔗 **Share** with fellow developers
+- 💖 **Sponsor** to support ongoing development
+- 📝 **Write a review** about your experience
 
-We welcome contributions from developers of all skill levels! Here's how you can help:
+## 📄 License
 
-### Getting Started
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-1. **Fork the repository** on GitHub
-2. **Clone your fork** locally
-3. **Create a new branch** for your feature or bug fix
-4. **Make your changes** following our coding standards
-5. **Test your changes** thoroughly
-6. **Submit a pull request** with a clear description
+## 🙏 Acknowledgments
 
-### Development Standards
-
-- **Code Style**: Follow the existing ESLint configuration
-- **TypeScript**: Use proper typing throughout the codebase
-- **Components**: Keep React components focused and reusable
-- **Commits**: Write clear, descriptive commit messages
-- **Testing**: Add tests for new features (coming soon)
-
-### Areas for Contribution
-
-- 🐛 **Bug Fixes**: Help identify and fix issues
-- ✨ **New Features**: Implement items from our roadmap
-- 📝 **Documentation**: Improve README, add code comments
-- 🎨 **UI/UX**: Enhance the user interface and experience
-- 🔧 **DevOps**: Improve build processes and deployment
-- 🧪 **Testing**: Add unit and integration tests
-
-### Reporting Issues
-
-If you find a bug or have a feature request:
-
-1. **Check existing issues** to avoid duplicates
-2. **Use issue templates** when available
-3. **Provide clear reproduction steps** for bugs
-4. **Include relevant screenshots** for UI issues
-
-### Code of Conduct
-
-- Be respectful and inclusive
-- Help maintain a welcoming environment
-- Focus on constructive feedback
-- Celebrate diverse perspectives and contributions
+- **React Team** - For the amazing framework
+- **Supabase Team** - For the incredible backend platform
+- **Next.js Team** - For pushing React development forward  
+- **Open Source Community** - For inspiration and continuous learning
+- **All Contributors** - Thank you for making this platform better!
 
 ---
 
-**Happy coding and reverse engineering! 🚀**
+<div align="center">
 
-*CodeCompass - Where inspiration meets implementation*
+**⭐ Star this repository if it helped accelerate your development journey!**
+
+*Built with ❤️ for the developer community*
+
+**Ready to master full-stack development? [Start your journey now!](https://codecompass.dev) 🚀**
+
+</div>
